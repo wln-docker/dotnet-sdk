@@ -5,3 +5,4 @@ RUN curl -o /tmp/dotnet.tar.gz https://download.visualstudio.microsoft.com/downl
     && echo " " > /tmp/dotnet.tar.gz
 WORKDIR /wln
 CMD dotnet restore && dotnet run
+ONBUILD COPY . /wln
