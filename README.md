@@ -5,7 +5,12 @@
 
 
 ### 编译用例
+alpine
 ```
-docker run --rm -it -v $(pwd):/code docker.io/wlniao/dotnet-sdk:8.0.0-alpine dotnet publish /code --self-contained -c Release -p:PublishAot=true -p:PublishTrimmed=true
+podman run --rm -it -v $(pwd):/code ccr.ccs.tencentyun.com/wlniao/dotnet-sdk:8.0.0-alpine dotnet publish /code --self-contained -c Release -p:PublishAot=true -p:PublishTrimmed=true
+```
+debian
+```
+podman run --rm -it -v $(pwd):/code ccr.ccs.tencentyun.com/wlniao/dotnet-sdk:8.0.0-debian dotnet publish /code --self-contained -c Release -p:PublishAot=true -p:PublishTrimmed=true
 ```
 
